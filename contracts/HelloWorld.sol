@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT 
 pragma solidity >=0.4.22 <0.9.0;
+import '../libs/Strings.sol';
 
 contract HelloWorld {
   string salute = 'Hello Blockchain World!';
@@ -10,7 +11,7 @@ contract HelloWorld {
   function ifStructure() external {
     bool x = false;
     bool y = false; // No válido múltiples: bool x,y; ó bool x = false, y = true;
-    if (1 > 2 && !(3 <= 4) || StringUtils.equal(portcheck,"signed"))) // salute != '' (no se puede comparar strings con == !=) 
+    if (1 > 2 || !(3 <= 4) && Strings.equals(x,"signed")) // salute != '' (no se puede comparar strings con == !=) 
       x = true;
     else if (true) 
       y = true;

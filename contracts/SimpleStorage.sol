@@ -17,6 +17,6 @@ contract SimpleStorage {
   function foo() external view returns (bool) { 
     User storage data2 = user;
     //data2.name = 'LALA';
-    return Strings.equals(data2.name, 'RBX');
+    return Strings.equal(data2.name, 'RBX');
   }
 }

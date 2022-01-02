@@ -12,6 +12,12 @@ contract("SimpleStorage", function (accounts) {
     await storage.updateData(10)
     const data = await storage.readData()
     return data.toString() === '10';
-    //return assert.isTrue(true);
+  });
+  it("Should update data 2", async function () {
+    //await SimpleStorage.deployed();
+    const storage = await SimpleStorage.new()
+    await storage.updateData("10")
+    const data = await storage.readData()
+    return data.toString() === '10';
   });
 });

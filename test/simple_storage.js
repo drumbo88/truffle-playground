@@ -5,7 +5,7 @@ const SimpleStorage = artifacts.require("SimpleStorage");
  * Ethereum client
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
-contract("SimpleStorage", function (/* accounts */) {
+contract("SimpleStorage", function (accounts) {
   it("Should update data", async function () {
     //await SimpleStorage.deployed();
     const storage = await SimpleStorage.new()

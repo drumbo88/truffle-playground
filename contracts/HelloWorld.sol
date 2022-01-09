@@ -3,6 +3,7 @@ pragma solidity >=0.4.22 <0.9.0;
 import '../libs/Strings.sol';
 
 contract HelloWorld {
+  uint[] numeros;
   string salute = 'Hello Blockchain World!';
 
   function sayIt() external view returns(string memory) {
@@ -15,5 +16,11 @@ contract HelloWorld {
       x = true;
     else if (true) 
       y = true;
+  }
+  function forStructure() external view returns(uint) {
+    uint sum = 0;
+    for (uint i; i<numeros.length; i++)
+      sum += numeros[i];
+    return sum;
   }
 }

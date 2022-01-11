@@ -23,4 +23,13 @@ contract HelloWorld {
       sum += numeros[i];
     return sum;
   }
+  function whileStructure() external view returns(uint) {
+    uint i = 0;
+    uint sum = 0;
+    while (i<numeros.length) {
+      sum += numeros[i];
+      i++;
+    }
+    return sum;
+  }
 }

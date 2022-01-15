@@ -14,9 +14,11 @@ contract SimpleStorage {
   function readData() external view returns(uint) {
     return data;
   }
+  function reduceDataToHalf() external view returns(uint) {
+    return uint(data / 2);
+  }
   function foo() external view returns (bool) { 
     User storage data2 = user;
-    //data2.name = 'LALA';
     return Strings.equal(data2.name, 'RBX');
   }
 }

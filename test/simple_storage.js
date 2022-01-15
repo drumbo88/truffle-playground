@@ -20,4 +20,10 @@ contract("SimpleStorage", function (accounts) {
     const data = await storage.readData()
     return data.toString() === '10';
   });
+  it("Should update data 3", async function () {
+    const storage = await SimpleStorage.new()
+    await storage.updateData("9")
+    const data = await storage.reduceDataToHalf()
+    return data.toString() === '4';
+  });
 });

@@ -8,7 +8,7 @@ library SafeMath {
     }
 
     function div(uint256 a, uint256 b) internal pure returns (uint256) {
-      assert(b <> 0);
+      assert(b != 0);
       return uint(a / b);
     }
 
